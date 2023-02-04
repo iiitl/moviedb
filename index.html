@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="public\fonts\SFProDisplay\stylesheet.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/reset.css" />
+    <style>
+    .main-nav.glassy{
+      display: flex;
+      
+    }
+    .mid{
+      display: flex;
+      justify-content: center;
+      padding-right: 10%;
+    }
+    </style>
   </head>
   <body>
-    <div id="backdrop" class="hidden fadeout" tabindex="0"></div>
+    <div id="backdrop" class="hidden fadeout" tabindex="0" ></div>
     <div
       id="search-component-form"
       class="hidden to-top-animation"
@@ -26,19 +37,20 @@
       <button id="search-component-btn" class="btn">Search</button>
     </div>
     <nav class="main-nav glassy">
-      <a href="/" class="clickable">🍿 MovieDB</a>
-      <div class="nav-links center">
-        <div id="search-component">
-          <span id="search-component-text" class="clickable" tabindex="0"
-            >Search</span
-          >
-        </div>
+      <a href="/" class="clickable" >🍿 MovieDB</a>
+      
+        <div  class="mid"style="flex:1"> <span id="search-component-text" class="clickable" tabindex="0"
+          >Search</span
+        >
       </div>
-      <div class="nav-links right">
+
+        
+    
+      
         <button class="btn" title="Toggle Dark Mode" id="dark-mode-toggle">
           <img src="/public/icons/moon.svg" alt="🕶️" class="light" />
         </button>
-      </div>
+      
     </nav>
     <main>
       <div class="info-placeholder">
