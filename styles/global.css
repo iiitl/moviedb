@@ -586,3 +586,37 @@ img.dark {
   background: var(--secondary-light);
   color: #fff;
 }
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.dialog.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dialog.enter {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.dialog.enter.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.dialog.exit {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.dialog.exit.show {
+  transform: translate(-50%, -50%) scale(0.5);
+}
