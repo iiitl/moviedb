@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/reset.css" />
   </head>
+  <script>
+    const dialog = document.querySelector("#dialog");
+    const body = document.querySelector("body");
+
+    dialog.addEventListener("show", () => {
+      body.style.overflow = "hidden";
+    });
+
+    dialog.addEventListener("hide", () => {
+      body.style.overflow = "auto";
+    });
+
+  </script>
   <body>
     <div id="backdrop" class="hidden fadeout" tabindex="0"></div>
     <div
