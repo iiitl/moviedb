@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/reset.css" />
   </head>
+  <script>
+    const searchForm = document.querySelector("#search-form");
+    const searchInput = document.querySelector("#search-input");
+    const resultsDiv = document.querySelector("#results");
+
+    searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      // Get the search query from the input
+      const searchQuery = searchInput.value;
+
+      // Fetch the search results and add them to the results div
+      fetch(`https://api.example.com/search?q=${searchQuery}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const newResults = data.results.map((result) => {
+            return `<div class="result">${result}</div>`;
+          });
+
+          resultsDiv.innerHTML += newResults.join("");
+        });
+    });
+
+  </script>
   <body>
     <div id="backdrop" class="hidden fadeout" tabindex="0"></div>
     <div
