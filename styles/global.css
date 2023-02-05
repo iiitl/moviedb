@@ -586,3 +586,23 @@ img.dark {
   background: var(--secondary-light);
   color: #fff;
 }
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 25px;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
