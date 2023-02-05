@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/reset.css" />
   </head>
+  <script>
+    const searchResultCardButton = document.querySelector("#search-component-btn");
+    const loadingDiv = document.querySelector("#loading");
+
+    searchResultCardButton.addEventListener("click", () => {
+      searchResultCardButton.style.display = "none";
+      loadingDiv.style.display = "block";
+
+      // Fetch movie data and show the dialog box
+      setTimeout(() => {
+        // Hide the loading div and show the movie dialog box
+        loadingDiv.style.display = "none";
+        // show the movie dialog box
+      }, 2000);
+    });
+  </script>
   <body>
     <div id="backdrop" class="hidden fadeout" tabindex="0"></div>
     <div
@@ -24,6 +40,7 @@
         placeholder="Search for a movie/tv-show"
       />
       <button id="search-component-btn" class="btn">Search</button>
+      <div id="loading" style="display: none;">Loading...</div>
     </div>
     <nav class="main-nav glassy">
       <a href="/" class="clickable">🍿 MovieDB</a>
