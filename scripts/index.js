@@ -35,6 +35,15 @@ searchSpan.addEventListener("click", () => openSearchForm());
 
 searchBtn.addEventListener("click", searchUsingAPI);
 
+
+searchBtn.addEventListener('click', clearPreviousResults);
+
+
+function clearPreviousResults() {
+  searchResults.innerHTML = "";
+}
+
+
 function onLoseFocus(e) {
   if (e.target == backdrop) {
     closeSearchForm();
@@ -73,6 +82,7 @@ async function searchUsingAPI() {
     );
   });
   resultsSection.classList.remove("hidden");
+
 }
 
 function openSearchForm() {
