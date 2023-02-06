@@ -53,6 +53,7 @@ async function searchUsingAPI() {
   let results = data.Search;
   console.log({ results });
   searchBtn.classList.remove("is-loading");
+  searchResults.innerHTML = '';
   results.forEach((searchResult) => {
     searchResults.appendChild(
       Generator.generateSearchResultCard(searchResult, async (e) => {
