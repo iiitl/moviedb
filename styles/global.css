@@ -37,6 +37,9 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-size: 1rem;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 body.no-scroll {
@@ -446,7 +449,7 @@ section.results.hidden {
 .vinyl-record-card {
   /* For hardware acceleration */
   -webkit-transform: translate3d(0, 0, 1px);
-  -webkit-backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden; */
   width: var(--vinyl-card-width);
   height: var(--vinyl-card-height);
   border-radius: var(--border-radius);
@@ -590,6 +593,7 @@ img.dark {
   color: #fff;
 }
 footer{
+  padding: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -602,14 +606,6 @@ footer{
   background-color: #f4f2f2;
   box-shadow: inset;
 
-}
-.signinbtn>a{
-  background-color: var(--primary-dark);
-  padding: 5px;
-  color: white;
-  border: solid 2px;
-  border-radius: 5px;
-  cursor: pointer;
 }
 .social{
   display: flex;
