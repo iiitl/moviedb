@@ -1,4 +1,6 @@
 :root {
+
+
   /* color swatches */
   --primary-light-sw: #0a9396;
   --primary-dark-sw: #005f73;
@@ -6,6 +8,8 @@
   --secondary-dark-sw: #ae2012;
   --bg-light-sw: rgba(255, 255, 255, 0.2);
   --bg-dark-sw: darkslategray;
+
+
   /* Global Variables */
   --primary-light: var(--primary-light-sw);
   --primary-dark: var(--primary-dark-sw);
@@ -15,14 +19,63 @@
   --bg-dark: var(--bg-dark-sw);
   --text-light: #fff;
   --text-dark: #000;
+
+
   --border-radius: 10px;
   --btn-height: 46px;
   --btn-padding: 0px 21px;
   --padding: 6px 21px;
-  --btn-box-shadow-depressed/* 😔 */: 0px 2px 2px rgba(0, 0, 0, 0.3),
+
+  --btn-box-shadow-depressed /*😔*/ : 0px 2px 2px rgba(0, 0, 0, 0.3),
     0px 1px 1px rgba(0, 0, 0, 0.4);
   --btn-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3),
     0px 4px 4px rgba(0, 0, 0, 0.4);
+
+
+  /* Vinyl Card variables */
+  --vinyl-image-w-h-ratio: 0.65;
+  --vinyl-card-height: 400px;
+  --vinyl-card-width: calc(
+    var(--vinyl-image-w-h-ratio) * var(--vinyl-card-height)
+  );
+  --vinyl-card-image-ratio: 0.8;
+  
+
+}
+
+:root.light {
+  
+  /* color swatches */
+  --primary-light-sw: #0a9396;
+  --primary-dark-sw: #005f73;
+  --secondary-light-sw: #ca6702;
+  --secondary-dark-sw: #ae2012;
+  --bg-light-sw: rgba(255, 255, 255, 0.2);
+  --bg-dark-sw: darkslategray;
+
+
+  /* Global Variables */
+  --primary-light: var(--primary-light-sw);
+  --primary-dark: var(--primary-dark-sw);
+  --secondary-light: var(--secondary-light-sw);
+  --secondary-dark: var(--secondary-dark-sw);
+  --bg-light: var(--bg-light-sw);
+  --bg-dark: var(--bg-dark-sw);
+  --text-light: #fff;
+  --text-dark: #000;
+
+
+  --border-radius: 10px;
+  --btn-height: 46px;
+  --btn-padding: 0px 21px;
+  --padding: 6px 21px;
+
+  --btn-box-shadow-depressed /*😔*/ : 0px 2px 2px rgba(0, 0, 0, 0.3),
+    0px 1px 1px rgba(0, 0, 0, 0.4);
+  --btn-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3),
+    0px 4px 4px rgba(0, 0, 0, 0.4);
+
+
   /* Vinyl Card variables */
   --vinyl-image-w-h-ratio: 0.65;
   --vinyl-card-height: 400px;
@@ -32,11 +85,74 @@
   --vinyl-card-image-ratio: 0.8;
 }
 
+
+/* #005f73 */
+
+:root.dark {
+  
+  /* color swatches */
+  --primary-dark-sw: #0a9396;
+  --secondary-dark-sw: #ae2012;
+  --bg-dark-sw: #086c6e;
+  --primary-light-sw: var(--primary-dark-sw);
+  --secondary-light-sw: var(--secondary-dark-sw);
+  --bg-light-sw: var(--bg-dark-sw);
+
+
+  /* Global Variables */
+  --primary-light: var(--primary-dark-sw);
+  --primary-dark: var(--primary-dark-sw);
+  --secondary-light: var(--secondary-dark-sw);
+  --secondary-dark: var(--secondary-dark-sw);
+  --bg-light: var(--bg-dark-sw);
+  --bg-dark: var(--bg-dark-sw);
+  --text-light: #fff;
+  --text-dark: #000;
+
+
+  /* -------- custom added vars ---------- */
+
+
+  --main-bg-color: rgb(61, 66, 62);
+  --text-color: white;
+
+
+
+  /* ------------------------------------- */
+
+
+  --border-radius: 10px;
+  --btn-height: 46px;
+  --btn-padding: 0px 21px;
+  --padding: 6px 21px;
+
+  --btn-box-shadow-depressed /*😔*/ : 0px 2px 2px rgba(0, 0, 0, 0.3),
+    0px 1px 1px rgba(0, 0, 0, 0.4);
+  --btn-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3),
+    0px 4px 4px rgba(0, 0, 0, 0.4);
+
+
+  /* Vinyl Card variables */
+  --vinyl-image-w-h-ratio: 0.65;
+  --vinyl-card-height: 400px;
+  --vinyl-card-width: calc(
+    var(--vinyl-image-w-h-ratio) * var(--vinyl-card-height)
+  );
+  --vinyl-card-image-ratio: 0.8;
+
+}
+
 body {
   font-family: "SFProDisplay", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-size: 1rem;
+
+  background-color: var(--main-bg-color);
+  color: var(--text-color) !important;
+
+  /* transition effect when switching dark and light mode */
+  transition: 0.3s ease;
 }
 
 body.no-scroll {
