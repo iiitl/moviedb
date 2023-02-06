@@ -67,6 +67,9 @@ body.no-scroll {
 .nav-links.center {
   justify-content: center;
   align-items: center;
+  /* position: absolute; */
+  /* margin: auto; */
+  margin-right: 16%;
 }
 
 /* TODO: Display the search input box on hovering the search text ✨ */
