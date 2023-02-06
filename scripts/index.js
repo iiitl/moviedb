@@ -69,6 +69,9 @@ async function searchUsingAPI() {
         console.log({ data });
         mainMovieDialog.replaceContent(Generator.generateMainCard(data));
         mainMovieDialog.showDialog();
+
+        // disable body scrolling when the dialog opens
+        disableBodyScroll();
       })
     );
   });
@@ -106,3 +109,12 @@ function disableBackdrop() {
   backdrop.classList.replace("fadein", "fadeout");
   document.body.classList.remove("no-scroll");
 }
+
+
+
+// Added function to disable body scrolling when the dialog opens
+function disableBodyScroll() {
+  let bodyElement = document.querySelector('body');
+  bodyElement.style.overflow = 'hidden';
+}
+

@@ -16,6 +16,9 @@ export default class Dialog {
     dialogCloseBtn.innerHTML = "&times;";
     dialogCloseBtn.onclick = () => {
       dialogEl.close();
+
+      // enable body scrolling as soon as the dialog closes
+      enableBodyScroll();
     };
     dialogEl.appendChild(dialogCloseBtn);
     dialogEl.appendChild(dialogContent);
@@ -64,6 +67,8 @@ export default class Dialog {
   toggleDialog() {
     if (this.#dialogElement.open) this.#dialogElement.close();
     else this.#dialogElement.showModal();
+    enableBodyScroll();
+
   }
 
   /**
@@ -75,4 +80,11 @@ export default class Dialog {
     this.#dialogContent.appendChild(DOMNode);
     return this;
   }
+}
+
+
+// To enable body scrolling when the dialog box closes
+function enableBodyScroll() {
+  let bodyElement = document.querySelector('body');
+  bodyElement.style.overflow = 'auto';
 }
