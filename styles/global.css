@@ -586,3 +586,84 @@ img.dark {
   background: var(--secondary-light);
   color: #fff;
 }
+
+
+
+
+/* ----------------  FOOTER --------------------------------------------- */
+
+
+
+.footer-main {
+  position: sticky;
+  bottom: 0rem;
+  height: 6.4rem;
+  width: 100%;
+  /* margin-top: 5%; */
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: white;
+
+  box-shadow: 10px 20px 40px 10px #585858;
+
+  /* flexbox */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex:1;
+  padding-left:10%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.social-links a {
+  font-size: 19px;
+  transition: 0.3s ease;
+  letter-spacing: 0.1rem;
+  font-weight: 800px;
+  text-decoration: none;
+  color: black;
+
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  color:#0a9396;
+
+  transition: 0.3s ease;
+}
+
+
+.title {
+  display: flex;
+  width: 50%;
+  /* justify-content: space-around; */
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+
+.title > * {
+  margin-left: 2rem;
+}
+.title img {
+  width: 20px;
+  height: 20px;
+}
+
+.icon > img {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
