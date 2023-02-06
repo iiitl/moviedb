@@ -69,6 +69,7 @@ async function searchUsingAPI() {
         console.log({ data });
         mainMovieDialog.replaceContent(Generator.generateMainCard(data));
         mainMovieDialog.showDialog();
+        noscrolling()
       })
     );
   });
@@ -105,4 +106,9 @@ function disableBackdrop() {
   backdrop.classList.add("hidden");
   backdrop.classList.replace("fadein", "fadeout");
   document.body.classList.remove("no-scroll");
+}
+
+function noscrolling() {
+  let b = document.querySelector('body')
+  b.style.overflow = 'hidden'
 }

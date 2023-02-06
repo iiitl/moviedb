@@ -16,6 +16,7 @@ export default class Dialog {
     dialogCloseBtn.innerHTML = "&times;";
     dialogCloseBtn.onclick = () => {
       dialogEl.close();
+      scrolling()
     };
     dialogEl.appendChild(dialogCloseBtn);
     dialogEl.appendChild(dialogContent);
@@ -64,6 +65,7 @@ export default class Dialog {
   toggleDialog() {
     if (this.#dialogElement.open) this.#dialogElement.close();
     else this.#dialogElement.showModal();
+    scrolling()
   }
 
   /**
@@ -75,4 +77,8 @@ export default class Dialog {
     this.#dialogContent.appendChild(DOMNode);
     return this;
   }
+}
+function scrolling() {
+  let a = document.querySelector('body')
+  a.style.overflow = 'auto'
 }
