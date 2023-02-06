@@ -556,8 +556,13 @@ img.dark {
   border: none;
   border-radius: var(--border-radius);
   box-shadow: var(--btn-box-shadow);
-  position: relative;
+
+  /* to prevent dialog box jumping when body overflow:hidden */
+  position: fixed;
+
   max-width: 80%;
+
+
 }
 
 .dialog::backdrop {
