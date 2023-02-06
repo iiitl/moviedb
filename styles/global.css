@@ -593,7 +593,9 @@ img.dark {
 /* ----------------  FOOTER --------------------------------------------- */
 
 
-
+body {
+  min-height: 100vh;
+}
 .footer-main {
   position: sticky;
   bottom: 0rem;
@@ -639,7 +641,7 @@ img.dark {
 }
 
 
-.title {
+.footer-main .title {
   display: flex;
   width: 50%;
   /* justify-content: space-around; */
@@ -649,10 +651,10 @@ img.dark {
 }
 
 
-.title > * {
+.footer-main .title > * {
   margin-left: 2rem;
 }
-.title img {
+.footer-main .title img {
   width: 20px;
   height: 20px;
 }
