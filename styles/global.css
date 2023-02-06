@@ -497,6 +497,18 @@ section.results.hidden {
   border-radius: var(--border-radius);
 }
 
+/* ----------------------------------------------------------------------------- */
+
+/*! REMOVING WHITESPACE BETWEEN ELEMENTS */
+
+.overflow-info h2 {
+  margin: calc(1% - 2px);
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+
 .vinyl-info:hover .overflow-info {
   transform: translateY(
     calc(
